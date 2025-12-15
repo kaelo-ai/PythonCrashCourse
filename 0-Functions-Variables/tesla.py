@@ -8,4 +8,4 @@ ceo = "Elon Musk"
 marketCap = 1.44  # float  / double
 peRatio = 303.99  # float
 ticker = "TSLA"  # float
-currentPrice = 458.96
+currentPrice = 734.09  # float

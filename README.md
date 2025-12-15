@@ -17,7 +17,10 @@ def add(x,y):
     sum = x + y
     return sum
 ```
+## Conditionals
+### IF Statements
 
+### Control Flow, elif, and else
 
 Python Crash Course
 >`Note:` Loosely based on [CS50’s Introduction to Programming with Python](https://cs50.harvard.edu/python)

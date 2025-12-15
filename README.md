@@ -6,6 +6,17 @@
 ### Variables
 - A variable is just a container for a value within your own program.
 ### Functions
+To create your own function, you use the "def" keyword. 
+```python
+def functionName(*arg):
+    # does something
+```
+e.g. Function that returns the sum of two numbers
+```python
+def add(x,y):
+    sum = x + y
+    return sum
+```
 
 
 Python Crash Course

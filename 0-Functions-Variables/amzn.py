@@ -6,7 +6,7 @@ print("Add add a new company to listings...")
 companyName = input("Company Name: ")
 ceo = input("CEO: ")
 marketCap = input("Market Cap: ")
-peRatio = input("PE Ratio: ")
+peRatio = int(input("PE Ratio: "))
 #create function 
 
 
@@ -15,10 +15,17 @@ def companyInfo(name, ceo, marketCap, exchange="NASDAQ"):
     print("Company Name: ", name)
     print("Exchange:", exchange)
     print("Ceo: ", ceo)
-    print("Market Cap:", marketCap)
-    print("PE Ratio: ", peRatio)
+    #print("PE Ratio: ", peRatio)
+    pe = peRatio
+    while pe <0:
+        pe = int(input("PE Ratio: "))
+        if pe <50:
+            print("strong,buy")
+        if pe >50:
+            print("strong sell")
+        elif pe ==50:
+            print("neutral")
     print("_________________________________________")
-
 
 # Function Call
 companyInfo(companyName, ceo, marketCap,)

@@ -6,6 +6,6 @@
 
 age = 17
 if age < 18:
-    print("Sorry, not old enough")
+    {print("Sorry, not old enough")}
 else:
     print("Cheers!!!")

@@ -1,4 +1,5 @@
 from email.mime import base
+import string
 
 
 welcomeMessage = "Welcome to KLS Trading!!!!!"
@@ -13,8 +14,10 @@ estYear = input("Year Founded? ")
 exchanges = ["NASDAQ","DOW","S&P500","FTSE","DAX","NIKKEI225"]
 openingPrice = input ("Opening Price: ")
 closingPrice = input ("Closing Price: ")
-choiceYes = bool(True)
-choiceNo = bool(False)
+questionPromt = "would you like to start again? Yes or No"
+choiceYes = input("Yes")
+choiceNo = input ("No")
+next = ("navigate back?"(companyName, ceo, exchanges, marketCap, selection=list,))
 priceMovement = (float(closingPrice)- float(openingPrice))
 peRatio = int(input("PE Ratio: "))
 list (enumerate(exchanges))
@@ -56,17 +59,18 @@ def tradeActivity(opening,closing, priceMovement):
     elif priceMovement ==0:
         print("No price movement")
 
-def startAgain(choiceYes, choiceNo, input, navigate):
-    print("Would you like to start again?", choiceYes, "or", choiceNo)
-    if input == (bool(choiceYes)): 
-           navigate = companyInfo(companyName, ceo, exchanges, marketCap, selection=list,)
-    elif input == choiceNo:
-            print("Thank you for testing KLS Trading")
+def startAgain(questionPromt, navigate,):
+    print(questionPromt)
+    input("Yes",)
+    if input == "Yes":
+        next(navigate(companyName, ceo, exchanges, marketCap, selection=list,))
+    elif input == "No":
+        print("Thank you for testing KLS Trading")
 # Function Call Company Info
 companyInfo(companyName, ceo, exchanges, marketCap, selection=list,)
-# Function Call Trade Activity
+# Function Call Trade Activity``
 tradeActivity(openingPrice, closingPrice, priceMovement,)
 #Function Call Start Again
-startAgain(choiceYes, choiceNo, bool, navigate=companyInfo(companyName, ceo, exchanges, marketCap, selection=list,))
+startAgain(questionPromt,navigate,)
 
 print ("Success!")
